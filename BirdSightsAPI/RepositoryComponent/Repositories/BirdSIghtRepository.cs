@@ -10,22 +10,22 @@ namespace RepositoryComponent.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<BirdSight> GetByIdAsync(int id)
+        public Task<BirdSight?> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public BirdSight CreateAsync(BirdSight entity)
+        public BirdSight? Create(BirdSight entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<BirdSight> UpdateAsync(int id, BirdSight entity)
+        public BirdSight? Update(BirdSight entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<BirdSight> DeleteAsync(int id)
+        public BirdSight? Delete(int id)
         {
             throw new NotImplementedException();
         }

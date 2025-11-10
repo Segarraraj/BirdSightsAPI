@@ -17,22 +17,22 @@ namespace RepositoryComponent.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Bird> GetByIdAsync(int id)
+        public Task<Bird?> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Bird CreateAsync(Bird entity)
+        public Bird Create(Bird entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Bird> UpdateAsync(int id, Bird entity)
+        public Bird? Update(Bird entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Bird> DeleteAsync(int id)
+        public Bird? Delete(int id)
         {
             throw new NotImplementedException();
         }
