@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "WebAPI.Controllers.BirdsController",
+    "Method": "Get",
+    "RelativePath": "api/Birds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

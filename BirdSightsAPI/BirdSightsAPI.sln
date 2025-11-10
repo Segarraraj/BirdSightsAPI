@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{0588B98A-9E65-4168-9EA7-9805CF9D6364}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryComponent", "RepositoryComponent\RepositoryComponent.csproj", "{1062D2CE-7782-4E6E-B6A4-90E58D5F6625}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapperComponent", "MapperComponent\MapperComponent.csproj", "{42B9210C-E45C-47F7-8893-6353F7A3227B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{A17133B5-FA0E-4BD5-B127-183BFE06DC47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{42B9210C-E45C-47F7-8893-6353F7A3227B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42B9210C-E45C-47F7-8893-6353F7A3227B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42B9210C-E45C-47F7-8893-6353F7A3227B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A17133B5-FA0E-4BD5-B127-183BFE06DC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A17133B5-FA0E-4BD5-B127-183BFE06DC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A17133B5-FA0E-4BD5-B127-183BFE06DC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A17133B5-FA0E-4BD5-B127-183BFE06DC47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1062D2CE-7782-4E6E-B6A4-90E58D5F6625} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{42B9210C-E45C-47F7-8893-6353F7A3227B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A17133B5-FA0E-4BD5-B127-183BFE06DC47} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47C492B4-C8D2-4522-986D-1B9699D0F62E}
