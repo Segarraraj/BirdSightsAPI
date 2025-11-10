@@ -5,7 +5,8 @@
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public Bird(int id, string name)        {
+        public Bird(int id, string name)
+        {
             Id = id;
             Name = name;
         }
