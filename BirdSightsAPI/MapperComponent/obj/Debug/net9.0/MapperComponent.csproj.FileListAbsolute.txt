@@ -1,0 +1,12 @@
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\MapperComponent.deps.json
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\MapperComponent.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\MapperComponent.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.AssemblyInfoInputs.cache
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.AssemblyInfo.cs
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.csproj.CoreCompileInputs.cache
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.sourcelink.json
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\refint\MapperComponent.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\ref\MapperComponent.dll
