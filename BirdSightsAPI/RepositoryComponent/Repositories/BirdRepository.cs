@@ -1,5 +1,8 @@
-﻿using Domain.Entities;
+﻿using Application.Interfaces;
+using Domain.Entities;
 using Domain.Ports.Secondary;
+using Microsoft.EntityFrameworkCore;
+using RepositoryComponent.Models;
 
 namespace RepositoryComponent.Repositories
 {
@@ -7,39 +10,71 @@ namespace RepositoryComponent.Repositories
     {
         private BirdSightsDBContext _context;
 
-        public BirdRepository(BirdSightsDBContext context)
+        private IMapper<BirdModel, Bird> _birdEntityMapper;
+        private IMapper<Bird, BirdModel> _birdModelMapper;
+
+        public BirdRepository(BirdSightsDBContext context, 
+            IMapper<BirdModel, Bird> birdEntityMapper,
+            IMapper<Bird, BirdModel> birdModelMapper)
         {
             _context = context;
+           
+            _birdEntityMapper = birdEntityMapper;
+            _birdModelMapper = birdModelMapper;
         }
 
-        public Task<IEnumerable<Bird>> GetAllAsync()
+        public async Task<IEnumerable<Bird>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Birds.Select(x => _birdEntityMapper.Map(x)).ToListAsync();
         }
 
-        public Task<Bird?> GetByIdAsync(int id)
+        public async Task<Bird?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var birdModel = await _context.Birds.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (birdModel == null)
+                return null;
+
+            return _birdEntityMapper.Map(birdModel);
         }
 
         public Bird Create(Bird entity)
         {
-            throw new NotImplementedException();
+            var birdModel = _birdModelMapper.Map(entity);
+            _context.Birds.Add(birdModel);
+
+            return entity;
         }
 
-        public Bird? Update(Bird entity)
+        public async Task<Bird?> UpdateAsync(int id, Bird entity)
         {
-            throw new NotImplementedException();
+            var birdModel = await _context.Birds.FirstOrDefaultAsync(_ => _.Id == id);
+
+            if (birdModel == null)
+                return null;
+
+            birdModel = _birdModelMapper.Map(entity, birdModel);
+
+            _context.Birds.Attach(birdModel);
+            _context.Birds.Entry(birdModel).State = EntityState.Modified;
+
+            return _birdEntityMapper.Map(birdModel);
         }
 
-        public Bird? Delete(int id)
+        public async Task<Bird?> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var birdModel = await _context.Birds.FirstOrDefaultAsync(_ => _.Id == id);
+
+            if (birdModel == null)
+                return null;
+
+            _context.Birds.Remove(birdModel);
+            return _birdEntityMapper.Map(birdModel);
         }
 
-        public Task SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
-            throw new NotImplementedException();
+            await _context.SaveChangesAsync();
         }
     }
 }
