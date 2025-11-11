@@ -37,29 +37,23 @@ namespace Application.Services
 
         public async Task<BirdSight?> UpdateAsync(int id, BirdSight entity)
         {
-            var birdSight = await _repository.GetByIdAsync(id);
-
+            var birdSight = await _repository.UpdateAsync(id, entity);
+            
             if (birdSight == null)
                 return null;
 
-            birdSight = _birdSightUpdateMapper.Map(entity, birdSight);
-            birdSight = _repository.Update(entity);
-
             await _repository.SaveChangesAsync();
-
             return birdSight;
         }
 
         public async Task<BirdSight?> DeleteAsync(int id)
         {
-            var birdSight = await _repository.GetByIdAsync(id);
-
-            if (birdSight == null)
+            var birdSight = await _repository.DeleteAsync(id);
+            
+            if (birdSight == null) 
                 return null;
 
-            _repository.Delete(id);
             await _repository.SaveChangesAsync();
-
             return birdSight;
         }
     }

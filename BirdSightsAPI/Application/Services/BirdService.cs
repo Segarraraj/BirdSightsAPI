@@ -37,29 +37,23 @@ namespace Application.Services
 
         public async Task<Bird?> UpdateAsync(int id, Bird entity)
         {
-            var bird = await _repository.GetByIdAsync(id);
+            var bird = await _repository.UpdateAsync(id, entity);
 
             if (bird == null)
                 return null;
-
-            bird = _birdUpdateMapper.Map(entity, bird);
-
-            _repository.Update(bird);
+            
             await _repository.SaveChangesAsync();
-
             return bird;
         }
 
         public async Task<Bird?> DeleteAsync(int id)
         {
-            var bird = await _repository.GetByIdAsync(id);
+            var bird = await _repository.DeleteAsync(id);
 
             if (bird == null)
                 return null;
-
-            _repository.Delete(id);
-            await _repository.SaveChangesAsync();
             
+            await _repository.SaveChangesAsync();            
             return bird;
         }
     }
