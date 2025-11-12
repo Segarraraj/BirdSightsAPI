@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MapperComponent\MapperComponent.csproj" />
     <ProjectReference Include="..\RepositoryComponent\RepositoryComponent.csproj" />
   </ItemGroup>
 
