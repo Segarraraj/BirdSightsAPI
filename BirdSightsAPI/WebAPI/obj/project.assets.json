@@ -1121,6 +1121,21 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "MapperComponent/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
+          "RepositoryComponent": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MapperComponent.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MapperComponent.dll": {}
+        }
+      },
       "RepositoryComponent/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -3253,6 +3268,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "MapperComponent/1.0.0": {
+      "type": "project",
+      "path": "../MapperComponent/MapperComponent.csproj",
+      "msbuildProject": "../MapperComponent/MapperComponent.csproj"
+    },
     "RepositoryComponent/1.0.0": {
       "type": "project",
       "path": "../RepositoryComponent/RepositoryComponent.csproj",
@@ -3261,6 +3281,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "MapperComponent >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.10",
       "RepositoryComponent >= 1.0.0",
       "Swashbuckle.AspNetCore >= 9.0.6"
@@ -3298,6 +3319,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\MapperComponent\\MapperComponent.csproj": {
+              "projectPath": "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\MapperComponent\\MapperComponent.csproj"
+            },
             "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\RepositoryComponent\\RepositoryComponent.csproj": {
               "projectPath": "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\RepositoryComponent\\RepositoryComponent.csproj"
             }

@@ -10,3 +10,7 @@ C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\obj\Debug\net9.0\A
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\obj\Debug\net9.0\refint\Application.dll
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\obj\Debug\net9.0\Application.pdb
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\obj\Debug\net9.0\ref\Application.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\bin\Debug\net9.0\Domain.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\bin\Debug\net9.0\Domain.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\obj\Debug\net9.0\Application.csproj.AssemblyReference.cache
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\Application\obj\Debug\net9.0\Applicat.44B5EDA2.Up2Date

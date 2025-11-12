@@ -90,3 +90,7 @@ C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\Domain
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\RepositoryComponent.dll
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\RepositoryComponent.pdb
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\Domain.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\Application.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\MapperComponent.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\MapperComponent.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\WebAPI\bin\Debug\net9.0\Application.pdb

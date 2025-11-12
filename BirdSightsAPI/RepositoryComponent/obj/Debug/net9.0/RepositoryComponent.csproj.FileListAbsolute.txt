@@ -16,3 +16,5 @@ C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\RepositoryComponent\obj\Debug\
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\RepositoryComponent\obj\Debug\net9.0\RepositoryComponent.pdb
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\RepositoryComponent\obj\Debug\net9.0\RepositoryComponent.genruntimeconfig.cache
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\RepositoryComponent\obj\Debug\net9.0\ref\RepositoryComponent.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\RepositoryComponent\bin\Debug\net9.0\Application.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\RepositoryComponent\bin\Debug\net9.0\Application.pdb

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "WebAPI/1.0.0": {
         "dependencies": {
+          "MapperComponent": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.10",
           "RepositoryComponent": "1.0.0",
           "Swashbuckle.AspNetCore": "9.0.6"
@@ -647,6 +648,17 @@
           }
         }
       },
+      "Application/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Domain/1.0.0": {
         "runtime": {
           "Domain.dll": {
@@ -655,8 +667,22 @@
           }
         }
       },
+      "MapperComponent/1.0.0": {
+        "dependencies": {
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
+          "RepositoryComponent": "1.0.0"
+        },
+        "runtime": {
+          "MapperComponent.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "RepositoryComponent/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10"
@@ -1110,7 +1136,17 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MapperComponent/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

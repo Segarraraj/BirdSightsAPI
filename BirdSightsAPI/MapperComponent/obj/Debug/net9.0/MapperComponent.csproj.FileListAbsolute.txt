@@ -10,3 +10,11 @@ C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\refint\MapperComponent.dll
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.pdb
 C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\ref\MapperComponent.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\Application.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\Domain.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\RepositoryComponent.dll
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\Application.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\Domain.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\bin\Debug\net9.0\RepositoryComponent.pdb
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperComponent.csproj.AssemblyReference.cache
+C:\Users\jsegr\source\BirdSightsAPI\BirdSightsAPI\MapperComponent\obj\Debug\net9.0\MapperCo.540CBA73.Up2Date
