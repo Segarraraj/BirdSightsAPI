@@ -8,13 +8,9 @@ namespace Application.Services
     {
         private IRepository<BirdSight> _repository;
 
-        private IMapper<BirdSight, BirdSight> _birdSightUpdateMapper;
-
-        public BirdSightService(IRepository<BirdSight> repository,
-            IMapper<BirdSight, BirdSight> birdSightUpdateMapper) 
+        public BirdSightService(IRepository<BirdSight> repository) 
         { 
-            _repository = repository; 
-            _birdSightUpdateMapper = birdSightUpdateMapper;
+            _repository = repository;
         }
 
         public async Task<IEnumerable<BirdSight>> GetAllAsync()
