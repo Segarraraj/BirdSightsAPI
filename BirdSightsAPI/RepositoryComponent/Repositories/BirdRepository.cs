@@ -3,6 +3,7 @@ using Domain.Entities;
 using Domain.Ports.Secondary;
 using Microsoft.EntityFrameworkCore;
 using RepositoryComponent.Models;
+using System.Threading.Tasks;
 
 namespace RepositoryComponent.Repositories
 {
@@ -38,12 +39,17 @@ namespace RepositoryComponent.Repositories
             return _birdEntityMapper.Map(birdModel);
         }
 
-        public Bird Create(Bird entity)
+        public async Task<Bird?> CreateAsync(Bird entity)
         {
             var birdModel = _birdModelMapper.Map(entity);
             _context.Birds.Add(birdModel);
 
-            return entity;
+            await _context.SaveChangesAsync();
+
+            if (birdModel == null)
+                return null;
+
+            return _birdEntityMapper.Map(birdModel);
         }
 
         public async Task<Bird?> UpdateAsync(int id, Bird entity)
@@ -58,6 +64,8 @@ namespace RepositoryComponent.Repositories
             _context.Birds.Attach(birdModel);
             _context.Birds.Entry(birdModel).State = EntityState.Modified;
 
+            await _context.SaveChangesAsync();
+
             return _birdEntityMapper.Map(birdModel);
         }
 
@@ -69,12 +77,9 @@ namespace RepositoryComponent.Repositories
                 return null;
 
             _context.Birds.Remove(birdModel);
-            return _birdEntityMapper.Map(birdModel);
-        }
-
-        public async Task SaveChangesAsync()
-        {
             await _context.SaveChangesAsync();
+
+            return _birdEntityMapper.Map(birdModel);
         }
     }
 }

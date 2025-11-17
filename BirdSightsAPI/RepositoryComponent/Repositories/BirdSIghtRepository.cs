@@ -38,12 +38,17 @@ namespace RepositoryComponent.Repositories
             return _birdSightEntityMapper.Map(birdSightModel);
         }
 
-        public BirdSight? Create(BirdSight entity)
+        public async Task<BirdSight?> CreateAsync(BirdSight entity)
         {
             var birdSightModel = _birdSightModelMapper.Map(entity);
             _context.BirdSights.Add(birdSightModel);
 
-            return entity;
+            await _context.SaveChangesAsync();
+
+            if (birdSightModel == null)
+                return null;
+
+            return _birdSightEntityMapper.Map(birdSightModel);
         }
 
         public async Task<BirdSight?> UpdateAsync(int id, BirdSight entity)
@@ -57,6 +62,7 @@ namespace RepositoryComponent.Repositories
 
             _context.BirdSights.Attach(birdSightModel);
             _context.BirdSights.Entry(birdSightModel).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
 
             return _birdSightEntityMapper.Map(birdSightModel);
         }
@@ -69,12 +75,9 @@ namespace RepositoryComponent.Repositories
                 return null;
 
             _context.BirdSights.Remove(birdSightModel);
-            return _birdSightEntityMapper.Map(birdSightModel);
-        }
-
-        public async Task SaveChangesAsync()
-        {
             await _context.SaveChangesAsync();
+
+            return _birdSightEntityMapper.Map(birdSightModel);
         }
     }
 }

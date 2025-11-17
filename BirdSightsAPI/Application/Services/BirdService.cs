@@ -25,31 +25,19 @@ namespace Application.Services
 
         public async Task<Bird?> CreateAsync(Bird entity)
         {
-            var bird = _repository.Create(entity);
-            await _repository.SaveChangesAsync();
-
+            var bird = await _repository.CreateAsync(entity);
             return bird;
         }
 
         public async Task<Bird?> UpdateAsync(int id, Bird entity)
         {
             var bird = await _repository.UpdateAsync(id, entity);
-
-            if (bird == null)
-                return null;
-            
-            await _repository.SaveChangesAsync();
             return bird;
         }
 
         public async Task<Bird?> DeleteAsync(int id)
         {
-            var bird = await _repository.DeleteAsync(id);
-
-            if (bird == null)
-                return null;
-            
-            await _repository.SaveChangesAsync();            
+            var bird = await _repository.DeleteAsync(id);           
             return bird;
         }
     }
