@@ -13,12 +13,17 @@ namespace WebAPI.Controllers
         private IService<Bird> _birdService;
 
         private IValidator<Bird> _birdCreateValidator;
+        private IValidator<Tuple<int, Bird>> _birdUpdateValidator;
+        
 
         public BirdsController(IService<Bird> birdService, 
-            IValidator<Bird> birdCreateValidator)
+            IValidator<Bird> birdCreateValidator,
+            IValidator<Tuple<int, Bird>> birdUpdateValidator)
         {
             _birdService = birdService;
+
             _birdCreateValidator = birdCreateValidator;
+            _birdUpdateValidator = birdUpdateValidator;
         }
 
         [HttpGet]
@@ -57,6 +62,11 @@ namespace WebAPI.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<Bird?>> Update(int id, Bird bird)
         {
+            var validationResult = _birdUpdateValidator.Validate(new Tuple<int, Bird>(id, bird));
+
+            if (!validationResult.IsValid)
+                return BadRequest(validationResult.Errors);
+
             var updatedBird = await _birdService.UpdateAsync(id, bird);
 
             if (updatedBird == null)

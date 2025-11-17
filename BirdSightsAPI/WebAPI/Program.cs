@@ -29,6 +29,7 @@ builder.Services.AddScoped<IMapper<BirdSightModel, BirdSight>, BirdSightMapper>(
 
 // Add validators
 builder.Services.AddScoped<IValidator<Bird>, BirdCreateValidator>();
+builder.Services.AddScoped<IValidator<Tuple<int, Bird>>, BirdUpdateValidator>();
 
 // Add services
 builder.Services.AddScoped<IService<Bird>, BirdService>();
