@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
             return Ok(await _birdService.GetAllAsync());
         }
 
-        [HttpGet("/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Bird?>> GetById(int id)
         {
             var bird = await _birdService.GetByIdAsync(id);
@@ -45,7 +45,7 @@ namespace WebAPI.Controllers
             return Ok(createdBird);
         }
 
-        [HttpPut("/{id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult<Bird?>> Update(int id, Bird bird)
         {
             var updatedBird = await _birdService.UpdateAsync(id, bird);
@@ -56,7 +56,7 @@ namespace WebAPI.Controllers
             return Ok(updatedBird);
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<Bird?>> Delete(int id)
         {
             var deletedBird = await _birdService.DeleteAsync(id);
