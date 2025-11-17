@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapperComponent", "MapperCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{A17133B5-FA0E-4BD5-B127-183BFE06DC47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationComponent", "ValidationComponent\ValidationComponent.csproj", "{76DF1587-94D8-4C0B-96A3-006143838BEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{A17133B5-FA0E-4BD5-B127-183BFE06DC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A17133B5-FA0E-4BD5-B127-183BFE06DC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A17133B5-FA0E-4BD5-B127-183BFE06DC47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76DF1587-94D8-4C0B-96A3-006143838BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76DF1587-94D8-4C0B-96A3-006143838BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76DF1587-94D8-4C0B-96A3-006143838BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76DF1587-94D8-4C0B-96A3-006143838BEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{1062D2CE-7782-4E6E-B6A4-90E58D5F6625} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{42B9210C-E45C-47F7-8893-6353F7A3227B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{A17133B5-FA0E-4BD5-B127-183BFE06DC47} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{76DF1587-94D8-4C0B-96A3-006143838BEC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47C492B4-C8D2-4522-986D-1B9699D0F62E}

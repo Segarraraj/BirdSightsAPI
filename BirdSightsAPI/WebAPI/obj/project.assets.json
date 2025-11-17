@@ -47,6 +47,19 @@
           }
         }
       },
+      "FluentValidation/12.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1755,6 +1768,20 @@
         "runtime": {
           "bin/placeholder/RepositoryComponent.dll": {}
         }
+      },
+      "ValidationComponent/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "FluentValidation": "12.1.0"
+        },
+        "compile": {
+          "bin/placeholder/ValidationComponent.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ValidationComponent.dll": {}
+        }
       }
     }
   },
@@ -1795,6 +1822,21 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "FluentValidation/12.1.0": {
+      "sha512": "FqWEn8BdbbFEHGanj9K8SVo+LyBeFWy2rolaE+e1TNUbifr8M7Iss+I1AqTSc8kjKtvjl/WN4XIHiRpslh42bA==",
+      "type": "package",
+      "path": "fluentvalidation/12.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.12.1.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -5209,6 +5251,11 @@
       "type": "project",
       "path": "../RepositoryComponent/RepositoryComponent.csproj",
       "msbuildProject": "../RepositoryComponent/RepositoryComponent.csproj"
+    },
+    "ValidationComponent/1.0.0": {
+      "type": "project",
+      "path": "../ValidationComponent/ValidationComponent.csproj",
+      "msbuildProject": "../ValidationComponent/ValidationComponent.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5217,7 +5264,8 @@
       "Microsoft.AspNetCore.OpenApi >= 9.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.11",
       "RepositoryComponent >= 1.0.0",
-      "Swashbuckle.AspNetCore >= 9.0.6"
+      "Swashbuckle.AspNetCore >= 9.0.6",
+      "ValidationComponent >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5257,6 +5305,9 @@
             },
             "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\RepositoryComponent\\RepositoryComponent.csproj": {
               "projectPath": "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\RepositoryComponent\\RepositoryComponent.csproj"
+            },
+            "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\ValidationComponent\\ValidationComponent.csproj": {
+              "projectPath": "C:\\Users\\jsegr\\source\\BirdSightsAPI\\BirdSightsAPI\\ValidationComponent\\ValidationComponent.csproj"
             }
           }
         }

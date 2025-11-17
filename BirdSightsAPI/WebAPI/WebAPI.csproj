@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MapperComponent\MapperComponent.csproj" />
     <ProjectReference Include="..\RepositoryComponent\RepositoryComponent.csproj" />
+    <ProjectReference Include="..\ValidationComponent\ValidationComponent.csproj" />
   </ItemGroup>
 
 </Project>

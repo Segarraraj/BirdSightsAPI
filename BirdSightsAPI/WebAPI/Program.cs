@@ -2,11 +2,13 @@ using Application.Interfaces;
 using Application.Services;
 using Domain.Entities;
 using Domain.Ports.Secondary;
+using FluentValidation;
 using MapperComponent.Mappers;
 using Microsoft.EntityFrameworkCore;
 using RepositoryComponent;
 using RepositoryComponent.Models;
 using RepositoryComponent.Repositories;
+using ValidationComponent.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,9 @@ builder.Services.AddScoped<IMapper<Bird, BirdModel>, BirdModelMapper>();
 builder.Services.AddScoped<IMapper<BirdModel, Bird>, BirdMapper>();
 builder.Services.AddScoped<IMapper<BirdSight, BirdSightModel>, BirdSightModelMapper>();
 builder.Services.AddScoped<IMapper<BirdSightModel, BirdSight>, BirdSightMapper>();
+
+// Add validators
+builder.Services.AddScoped<IValidator<Bird>, BirdCreateValidator>();
 
 // Add services
 builder.Services.AddScoped<IService<Bird>, BirdService>();
