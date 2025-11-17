@@ -1,6 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
-
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -12,9 +12,13 @@ namespace WebAPI.Controllers
     {
         private IService<Bird> _birdService;
 
-        public BirdsController(IService<Bird> birdService)
+        private IValidator<Bird> _birdCreateValidator;
+
+        public BirdsController(IService<Bird> birdService, 
+            IValidator<Bird> birdCreateValidator)
         {
             _birdService = birdService;
+            _birdCreateValidator = birdCreateValidator;
         }
 
         [HttpGet]
@@ -37,6 +41,11 @@ namespace WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Bird?>> Create(Bird bird)
         {
+            var validationResult = _birdCreateValidator.Validate(bird);
+
+            if (!validationResult.IsValid)
+                return BadRequest(validationResult.Errors);
+
             var createdBird = await _birdService.CreateAsync(bird);
 
             if (createdBird == null)
