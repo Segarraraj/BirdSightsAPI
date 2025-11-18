@@ -27,7 +27,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> Get()
+        public async Task<ActionResult<ICollection<Bird>>> Get()
         {
             return Ok(await _birdService.GetAllAsync());
         }
@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
             var bird = await _birdService.GetByIdAsync(id);
 
             if (bird == null)
-                return NotFound(null);
+                return NotFound();
 
             return Ok(bird);
         }
